@@ -1,18 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Angular App</title>
-</head>
-<body>
+  <nav>
+    <!-- Navigation link to Component Alpha with active state handling -->
+    <a routerLink="/component-alpha" routerLinkActive="active">Component Alpha</a>
+    <!-- Navigation link to Component Beta with active state handling -->
+    <a routerLink="/component-beta" routerLinkActive="active">Component Beta</a>
+    <!-- Navigation link to Component Charlie with active state handling -->
+    <a routerLink="/component-charlie" routerLinkActive="active">Component Charlie</a>
+  </nav>
+  <!-- Placeholder for routing content -->
+  <router-outlet></router-outlet>
+
+  <!-- Heading displaying the title property -->
   <h1> {{title}} </h1>
+  <!-- Paragraph displaying the description property -->
   <p> {{description}} </p>
+  <!-- Paragraph displaying the author property -->
   <p> {{author}} </p>
 
   <h2>List of Students</h2>
-  <ul *ngFor="let student of students">
-    <li> {{student.name}} (Age: {{student.age}}) </li>
+  <ul>
+    <!-- Loop through each student object in the students array and display their name and age -->
+    <li *ngFor="let student of students">
+      {{student.name}} (Age: {{student.age}})
+    </li>
   </ul>
-</body>
-</html>
